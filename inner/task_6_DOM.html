@@ -1,0 +1,81 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Объект <code>window</code>. Черепахи</title>
+    </head>
+    <body>
+    <div class="container">
+    <div class="page-header">
+    
+    <h1>Объект <code>window</code>. Черепахи</h1>
+    </div>
+    
+    <div style="float:right">
+            <img src="examples/turtles-all-the-way-down.jpg" alt="turtles" />
+        </div>
+        
+    
+    <blockquote>
+            <p>
+                Однажды известный ученый Бертран Рассел читал лекцию по астрономии. 
+          Он рассказывал про строение Солнечной системы и Галактики. В конце
+          лекции одна из слушательниц, старая почтенная леди, заметила:<br />
+          <q>То, что вы нам сказали - чушь. На самом деле мир - это плоский диск, 
+          поддерживаемый спиной гигантской черепахи.</q><br />
+           Ученый, прежде чем ответить, широко улыбнулся:<br />
+           <q>Но на чем стоит черепаха?</q><br /> 
+           <q>Вы очень умны, молодой человек,</q> ответила старая леди, <q>но там внизу только черепахи!</q>
+            </p>
+            <p>
+                (см.: <a class="popup" href="http://en.wikipedia.org/wiki/Turtles_all_the_way_down">Turtles all the way down</a> на Wikipedia)
+            </p>
+        </blockquote>
+        
+        <h3>Задание</h3>
+        <ul>
+            <li>Нужно сделать версию "turtles all the way down", в которой Земля находится 
+        на спине у слона, который стоит на спине у черепахи, каждая из которых тоже 
+        находится на спине следующей черепахи (и так до бесконечности).
+      
+        </li>
+            <li>Страница 
+        (<a href="examples/turtles.zip">скачать архив</a>)
+        уже содержит Землю, слона и одну черепаху.</li>
+            <li>
+                Напишите JavaScript-код  <code>turtles.js</code>, который добавит на страницу
+          бесконечно-прокручивающихся черепах.
+            </li>
+            <li>
+                Нужно добавлять новую черепаху в конец страницы каждый раз, когда пользователь
+          прокручивает страницу вниз.
+                Для добавления черепахи, добавьте объекту <code>document.body</code> новый <code>div</code> 
+          с установленным классом <code>turtle</code>.
+            </li>
+        </ul>
+        
+        <h3>Подсказки</h3>
+        <p>
+            Для реализации используйте следующие события и свойства:
+        </p>
+    
+        <ol>
+            <li><code>document.onscroll</code> событие, которое возникает при прокрутке страницы;</li>
+            
+            <li><code>document.body.scrollHeight</code> высота страницы.</li>
+    
+            <li><code>window.scrollY</code> число пикселей, которые прокручены вниз от начала страницы.</li>
+    
+            <li><code>window.innerHeight</code> высота видимой части страницы.</li>
+        </ol>
+    
+       
+        
+    
+    </div>
+    </body>
+    
+    </html>
+    

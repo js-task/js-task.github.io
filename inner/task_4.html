@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<title>Работа с консолью. Отладка JS-кода</title>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+
+<h1>Работа с консолью. Отладка JS-кода</h1>
+</div>
+
+<div class="alert alert-danger" role="danger"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+<strong><abbr title="Nota bene">NB</abbr>!</strong> Консоль позволяет поэкспериментировать с отображением и внешним видом HTML-страниц. 
+Однако при этом важно помнить, что сам HTML-документ не меняется при работе с ним в консоли. 
+Как только вы перезагрузите страницу, она примет свой прежний вид.</div>
+
+<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+<strong>Совет</strong> При работе с Javascript консоль всегда должна быть открыта.</div>
+
+
+<ul class="list-group">
+
+<li class="list-group-item"><h4>Работа с консолью</h4>
+
+<ol id="taskList">
+<li>Не уходя со страницы с заданием, откройте инструменты разработчика (<code>F12</code> или <code>Ctrl</code>+<code>Shift</code>+<code>I</code> или 
+Меню -> Веб-разработка -> Инструменты разработчика или Меню -> Дополнительные инструменты -> Инструменты разработчика), перейдите на вкладку Консоль (Console).</li>
+<li>Выведите на консоль надпись при помощи выражения <pre>console.log('Hello World!');</pre></li>
+<li>Создайте переменную, выполнив выражение <pre>var x = 10;</pre></li>
+<li>Выполните вычисление арифметического выражения с помощью <pre>console.log(x + 5);</pre></li>
+<li>Попробуйте создать объект <code>Date</code> выполнив выражение <pre>var d = new Date();
+console.log(d);</pre>
+От созданного объекта <code>d</code> вызовите методы, например, <code>getFullYear()</code>, <code>getMonth()</code>, <code>getDate()</code>.
+</li>
+<li>Используйте JavaScript, чтобы изменить страницу. 
+Вставьте в HTML заголовок, выполнив выражение <pre>document.body.innerHTML += "&lt;h1&gt; Новый загловок страницы &lt;/h1&gt;";</pre>
+Проверьте, что на страницу с заданием был добавлен новый заголовок. Перейдите на вкладку Инспектор (Elements) и проверьте, 
+что новый заголовок добавлен и в HTML-код.</li>
+<li>Попробуйте изменить стиль страницы, например, цвет фона <pre>document.body.style.backgroundColor = "yellow";</pre>
+Посмотрите как изменился HTML-код на вкладке Инспектор (Elements). Поэкспериментируйте с изменением других стилей.
+</li>
+<li>Обратитесь к элементу по идентификатору <pre>document.getElementById("taskList");</pre>
+раскройте список его свойств, найдите свойства <code>childNodes</code>, <code>parentNode</code> и <code>style</code>. Разберитесь что в них хранится.</li>
+<li>Измените цвет шрифта элемента с идентификатором <code>taskList</code>
+<pre>document.getElementById("taskList").style.backgroundColor= "red"</pre>
+</li>
+<li>Обратитесь к переменной, которую вы не инициализировали, например так
+<pre>console.log(test);</pre> Прочитайте текст ошибки в консоли.</li>
+
+<li>Обратитесь к элементу по несуществующему идентификатору
+<pre>document.getElementById("no");</pre></li>
+
+<li>Попробуйте изменить стиль у элемента с несуществующим идентификатором
+<pre>document.getElementById("no").style.backgroundColor= "red";</pre></li>
+Прочитайте сообщение об ошибке.
+
+</ol>
+
+
+
+</li>
+<li class="list-group-item"><h4>Отладка JS-кода</h4>
+
+<ol>
+<li>Скачайте <a href="examples/buggy.zip">архив</a>, в котором содержится 4 HTML-документа и 4 файла с расширением js. Скопируйте все файлы из архива в папку вашего проекта.</li>
+<li>В каждой паре HTML-документ и js-файл присутствуют ошибки из-за которых код не выполняется (на странице по нажатию на кнопку в консоль должно выводиться сообщение).</li>
+<li>С помощью консоли найдите и исправьте ошибки.</li>
+</ol>
+</li>
+</ul>
+                                                   
+</div>
+</body>
+</html>

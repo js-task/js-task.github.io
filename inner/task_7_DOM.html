@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Объекты DOM: Цветные прямоугольники</title>
+    </head>
+    <body>
+    <div class="container">
+    <div class="page-header">
+    
+    <h1>Объекты DOM: Цветные прямоугольники</h1>
+    </div>
+    
+    
+    
+    <p>Добавить javascript-код к странице (скачать файлы в <a href="examples/rect.zip">архиве</a>).</p>
+    
+   
+    
+    <p>Используя объекты DOM, напишите программу, которая</p>
+                    <ul>
+                      <li>при загрузке страницы создает N (число N задать глобальной переменной в js-файле) прямоугольников 
+              (элементов <code>div</code> с классом <code>rectangle</code>) и помещает их в элемент 
+              <code>div</code> с идентификатором <code>rectanglearea</code>. Прямоугольники должны располагаться 
+              на странице случайным образом.</li>
+                        <li>при нажатии кнопки "Пуск!" каждый прямоугольник должен начать изменять свой цвет
+              случайным образом 1 раз в секунду (если смена цветов запущена, кнопка "Пуск" не должна реагировать на повторные нажатия).</li>
+                        <li>при нажатии кнопки "Стоп" смена цветов прямоугольников должна прекратиться.</li>
+                        <li>при клике по созданному прямоугольнику, этот прямоугольник должен быть удален 
+                        (в теле обработчика события ключевое слово <code>this</code> ссылается на объект, с которым произошло данное событие).</li>
+    
+                        <li>выполните <a href="variant_task_7.html" target="var">задание</a>:
+                         <br /><br /><iframe name="var" height="150" width="700" ></iframe>
+                        </li>
+                    </ul>
+    
+    <p>Для работы с узлами DOM используйте методы 
+    <a href="http://www.w3schools.com/jsref/met_document_createelement.asp"><code>createElement()</code></a>,
+    <a href="http://w3schools.com/jsref/met_element_setattribute.asp"><code>setAttribute()</code></a>, 
+    <a href="http://www.w3schools.com/jsref/met_node_appendchild.asp"><code>appendChild()</code></a>, 
+    <a href="http://www.w3schools.com/jsref/met_node_removechild.asp"><code>removeChild()</code></a> 
+     и свойство 
+    <a href="http://w3schools.com/jsref/dom_obj_style.asp"><code>style</code></a>.
+    </p>
+        
+    
+    
+    </div>
+    </body>
+    </html>
+    

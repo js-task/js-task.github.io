@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<title>Объекты <code>Array</code> и <code>String</code></title>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+
+<h1>Объекты <code>Array</code> и <code>String</code></h1>
+</div>
+
+
+<div class="alert alert-success" role="alert">
+
+</div>
+
+
+<p> 
+		Дана web-страница (по ссылке загрузится <a href="examples/order.zip">архив с исходными файлами</a>).
+		HTML и CSS уже написаны, нужно написать JavaScript-код, реализующий обработку 
+		нажатия кнопок. Если нужно, внесите необходимые изменения в HTML-код страницы, 
+		например, можно добавить идентификаторы (атрибуты <code>id</code>) элементам управления.
+	</p>
+	
+	<div class="expectedoutput">
+		<a class="popup" href="examples/order.zip">
+			<img src="examples/order.png" alt="expected form output" width="700" />
+		</a>
+	</div>
+	
+	<p>
+		
+	</p>
+	
+	<div class="alert alert-danger" role="danger"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> 
+	Для отделения контента и поведения веб-страницы, используйте ненавязчивый Javascript (см. лекцию по DOM)</div>	
+	
+	<p>
+		Добавьте следующее поведение для кнопок:
+	</p>
+	<ul>
+		<li>
+			<strong>Очистить:</strong>  Удаляет весь текст из текстового поля.
+		</li>
+		<li>
+			<strong>Верхний регистр:</strong> Преобразует весь текст в верхний регистр.
+		</li>
+		<li>
+			<strong>Сортировать:</strong>  Сортирует строки в алфавитном порядке.
+		</li>
+		<li>
+			<strong>Перевернуть:</strong>  Меняет порядок строк на обратный.
+		</li>
+		<li>
+			<strong>Добавить номера строк:</strong>  Добавляет номера строк вначале каждой строки, например, так "1. "
+			Не обращайте внимание, если строки уже пронумерованы.
+		</li>
+		<li>
+			<strong>Удалить пустые строки:</strong> Удаляет все пустые строки из текстового поля, включая строки заполненные только пробелами 
+			(используйте метод <a href="https://www.w3schools.com/jsref/jsref_trim_string.asp"><code>trim()</code></a>).
+		</li>
+		<li>
+			<strong>Перемешать:</strong> Записать строки в случайном порядке. 
+			У JavaScript-объекта <code>Array</code> отсутствует метод <code>shuffle</code>, но вы можете 
+			реализовать следующий алгоритм для перемешивания:
+<pre>для каждого индекса i:
+   случайно выбрать индекс j &gt;= i.
+   поменять метами строки i и j.</pre>
+		</li>
+	</ul>
+	
+	
+
+	
+	<p>Помните, что</p>
+	<ul>
+		<li>
+			вы можете обратиться к DOM-объекту любого HTML-элемента с помощью метода <code>document.getElementById("идентификатор")</code>.
+		</li>
+		
+		<li>
+			У объекта <code>String</code> есть метод
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_split.asp"><code>split</code></a>
+			для разделения строки на подстроки и занесения в массив.
+		</li>
+		
+		<li>
+			У объекта <code>Array</code> есть свойство <a href="http://www.w3schools.com/jsref/jsref_length_array.asp"><code>length</code></a> и такие методы как: 
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_concat_array.asp"><code>concat</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_join.asp"><code>join</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_pop.asp"><code>pop</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_push.asp"><code>push</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_reverse.asp"><code>reverse</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_shift.asp"><code>shift</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_slice_array.asp"><code>slice</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_sort.asp"><code>sort</code></a>,
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_splice.asp"><code>splice</code></a> и
+			<a class="popup" href="http://www.w3schools.com/jsref/jsref_unshift.asp"><code>unshift</code></a>.
+		</li>
+	</ul>
+	
+	
+
+</div>
+</body>
+</html>

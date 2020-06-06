@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../../../libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<title>Обработка данных формы</title>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+
+<h1>Обработка данных формы</h1>
+</div>
+
+
+
+<ol>
+	<li>Создайте файл <samp>convertor.js</samp>, на который ссылается <a href="examples/convertor.html"><samp>convertor.html</samp></a>.</li>
+	<li>Напишите функцию <code>convert()</code> в <samp>convertor.js</samp>,
+		которая берет значение из текстового поля и переводит его из единиц измерения, выбранных в левом выпадающем 
+    списке, в единицы измерения из правого списка (измените содержимое списков в HTML-документе, поместите в них единицы измерения из вашего <a href="variants.html" target="var">варианта</a>).
+	<br /><iframe name="var" height="300" width="700"></iframe>
+	</li>
+  <li>Результат преобразования нужно отобразить в элементе с идентификатором <code>#answer</code>.</li>
+	</ol>
+	
+	<div class="alert alert-danger" role="danger"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> 
+	Для отделения контента и поведения веб-страницы, используйте ненавязчивый Javascript (см. лекцию по DOM)</div>	
+
+
+	<h2>Рекомендации</h2>
+  <ul>
+  <li>Для того, чтобы считать значения из формы, добавьте атрибуты <code>id</code> для элементов формы (текстовое поле для ввода и два элемента <code>select</code>)</li>
+  <li>В файле <samp>convertor.js</samp> назначьте функцию-обработчик события <code>click</code> для кнопки <code>button</code></li>
+  <li>В функции-обработчике вам нужно считать данные из элементов формы (текстовое поле для ввода и два выпадающих списка), 
+  для этого воспользуйтесь методом <code>getElementById()</code> и свойством <code>value</code>, например, так
+  <pre>var input = document.getElementById("myInput");   // обращение к элементу с id="myInput"
+var temp = input.value;                           // считывание данных из поля с id="myInput" </pre>
+  </li>
+  <li>При получении данных из выпадающего списка, вы получите значение, которое выбрал пользователь, например "кг" или "фунт". 
+  Для удобства обработки данных из выпадающих списков скорректируйте html-код формы, каждому элементу <code>option</code> добавьте 
+  атрибут <code>value</code> с нужным значением, например, с коэффициентом перевода к какой-либо единице измерения, например так:
+  <pre>&lt;select&gt;
+&lt;option value="1">кг&lt;/option&gt;
+&lt;option  value="0.454">фунт&lt;/option&gt;
+&lt;/select&gt;</pre>
+Тогда при считывании данных из выпадающего списка вы получите не описание элемента "фунт", а его значение 0.454.
+<br /><strong>Обратите внимание,</strong> что в javascript, так же как и в Java, разделителем целой и дробной частей является точка. 
+  </li>
+  <li>Вывести информацию в html-элемент нужно будет с помощью свойства <code>innerHTML</code>.</li>
+  </ul>
+	
+</div>
+
+</body>
+</html>
